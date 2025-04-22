@@ -4,6 +4,12 @@ import string
 from nltk.corpus import stopwords
 import nltk
 
+@st.cache_data
+def setup_nltk():
+    nltk.download('stopwords')
+
+setup_nltk()
+
 
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
