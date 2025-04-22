@@ -4,11 +4,9 @@ import string
 from nltk.corpus import stopwords
 import nltk
 
-@st.cache_data
-def setup_nltk():
-    nltk.download('stopwords')
-
-setup_nltk()
+# Download necessary resources at runtime
+nltk.download('punkt')
+nltk.download('stopwords')  # Keep this too, since you're using stopwords
 
 
 from nltk.stem.porter import PorterStemmer
